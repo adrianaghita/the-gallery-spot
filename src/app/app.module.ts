@@ -24,6 +24,7 @@ import { ProductsPageComponent } from './pages/products-page/products-page.compo
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { CartService } from './services/cart.service';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     MatTableModule,
     MatBadgeModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

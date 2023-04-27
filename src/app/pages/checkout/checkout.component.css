@@ -19,3 +19,7 @@ label {
 button {
   margin-top: 1rem;
 }
+
+input.ng-invalid.ng-touched {
+  border: 3px solid red;
+}
