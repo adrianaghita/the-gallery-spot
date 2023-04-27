@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+:root {
+  --primary-color: #eae7e3;
+  --hover-color: #d9d4cc;
+}
+
+body {
+  color: var(--primary-color);
+  background-color: #201d1b;
+}
+
+/*Grids*/
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+  }
+}

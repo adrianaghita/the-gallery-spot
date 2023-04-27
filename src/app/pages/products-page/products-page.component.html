@@ -1,0 +1,33 @@
+<div class="products-list container mt-5 px-1 py-5">
+  <h4 class="products-title">Products</h4>
+
+  <div
+    class="container item-container grid--1x2 px-2 pb-5 border-bottom"
+    *ngFor="let product of product"
+  >
+    <div>
+      <img class="img-products" src="{{ product.image }}" alt="" />
+    </div>
+    <div class="product-content mt-4 pt-4">
+      <p>
+        <span class="font-weight-bold">Name: </span>
+        <span class="text-info">{{ product.title }}</span>
+      </p>
+      <p>
+        <span class="font-weight-bold">Description: </span>
+        {{ product.description }}
+      </p>
+      <p>
+        <span class="font-weight-bold">Dimensions: </span>
+        {{ product.dimensions }}
+      </p>
+      <p>
+        <span class="font-weight-bold">Price: </span>
+        {{ product.price | currency }}
+      </p>
+      <button (click)="addToCart(product)" class="btn btn-success mt-4">
+        ADD TO CART
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div *ngIf="items.length">
+  <div *ngFor="let item of items">
+    <div class="grid1x2 mt-3">
+      <div>
+        <img class="img-cart" src="{{ item.image }}" alt="product image" />
+      </div>
+      <div class="cart-content">
+        <h3>{{ item.title }}</h3>
+        <button mat-icon-button (click)="increaseQ(item)">
+          <mat-icon>add</mat-icon>
+        </button>
+        <span>{{ item.quantity }} </span>
+        <button mat-icon-button (click)="decreaseQ(item)">
+          <mat-icon>remove</mat-icon>
+        </button>
+        <p class="mt-2">{{ item.price * item.quantity | currency }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid1x2 mt-3">
+    <div>
+      <h3 class="text-center">Total:</h3>
+    </div>
+    <div>
+      <p class="total">{{ getTotal(items) | currency }}</p>
+    </div>
+  </div>
+  <div class="text-center mt-3 grid1x2">
+    <div>
+      <a routerLink="/home"
+        ><button class="btn btn-outline-secondary">Continue Shopping</button></a
+      >
+    </div>
+
+    <div>
+      <a class="ml-3" routerLink="/checkout"
+        ><button class="btn btn-success">Checkout</button></a
+      >
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!items.length" class="text-center">
+  <h3>Your cart is empty!</h3>
+  <a href="home"
+    ><button class="btn btn-success">Explore the products</button></a
+  >
+</div>

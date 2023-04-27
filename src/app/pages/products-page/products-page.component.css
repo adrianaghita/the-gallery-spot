@@ -1,0 +1,36 @@
+.products-list {
+  margin-bottom: 2rem;
+}
+
+.products-title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.item-container {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .products-title {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+
+  .item-container {
+    font-size: 1.2rem;
+  }
+}
+
+.img-products {
+  object-fit: cover;
+  width: 20rem;
+  height: 25rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}

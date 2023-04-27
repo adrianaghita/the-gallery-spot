@@ -1,0 +1,58 @@
+<nav
+  class="d-flex align-items-center justify-content-center justify-content-md-between pt-3 px-5 border-bottom border-1 border-white"
+>
+  <div class="nav col-12 col-md-auto">
+    <a class="text-decoration-none text-white" routerLink="home">
+      <h1>The Gallery Spot</h1>
+    </a>
+  </div>
+  <div class="text-end pb-3">
+    <button mat-button [matMenuTriggerFor]="cartMenu">
+      <fa-icon class="icon" [icon]="faCartShopping"> </fa-icon>
+    </button>
+    <mat-menu #cartMenu="matMenu">
+      <div *ngIf="!items.length" class="p-3">
+        <div>
+          <p>Your cart is empty</p>
+        </div>
+        <div>
+          Total:
+          <span>{{ getTotal(items) | currency }}</span>
+        </div>
+        <div>
+          <button routerLink="home" class="btn btn-outline-success mt-2">
+            Continue shopping
+          </button>
+          <button routerLink="cart" class="btn btn-outline-secondary mt-2">
+            Shopping cart
+          </button>
+        </div>
+      </div>
+
+      <div class="p-3" *ngIf="items.length">
+        <div><h3>Cart Items:</h3></div>
+        <div class="py-1" *ngFor="let item of items">
+          <div class="flex justify-between mb-2 pt-2 border-bottom">
+            <span>{{ item.title }}</span>
+            <span class="font-bold">
+              {{ item.price | currency }} x {{ item.quantity }}</span
+            >
+          </div>
+        </div>
+        <div>
+          Total:
+          <span>{{ getTotal(items) | currency }}</span>
+        </div>
+
+        <div>
+          <span> </span>
+          <span
+            ><button routerLink="cart" class="btn btn-success mt-2">
+              Shopping cart
+            </button></span
+          >
+        </div>
+      </div>
+    </mat-menu>
+  </div>
+</nav>
