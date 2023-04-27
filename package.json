@@ -1,6 +1,6 @@
 {
   "name": "the-gallery-spot",
-  "version": "0.0.0",
+  "version": "18x",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
