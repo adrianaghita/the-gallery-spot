@@ -2,7 +2,6 @@
   "name": "the-gallery-spot",
   "version": "18x",
   "scripts": {
-    "postinstall": "ng build --aot --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
